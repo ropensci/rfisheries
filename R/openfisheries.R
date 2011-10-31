@@ -22,7 +22,7 @@
 #' ggplot(dat2, aes(year, value, fill=variable)) + geom_area() 
 #' }
 openfisheries <- function(country=NA, api_key=getOption("openfisheries", 
-                          stop("Need an api key for openfisheries.org"),
+                          stop("Need an api key for openfisheries.org")),
                           curl=getCurlHandle(), ...){
   args <- list(api_key = api_key)
   url <- "http://openfisheries.org/api/landings.php"
