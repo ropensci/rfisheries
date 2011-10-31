@@ -1,3 +1,4 @@
+source("../R/openfisheries.R")
 options(openfisheries = "carl2011")
 ## call the queries
 global <- openfisheries() 
