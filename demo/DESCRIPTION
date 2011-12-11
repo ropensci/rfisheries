@@ -1,8 +1,0 @@
-Package: rfisheries
-Description: A programmatic interface to openfisheries.org 
-  and related packages.  
-Title: R Interface for fisheries data 
-Version: 0.0-1
-License: BSD
-Author: Carl Boettiger
-Maintainer: Carl Boettiger, <cboettig@gmail.com>
