@@ -1,0 +1,15 @@
+Package: rfisheries
+Title: Tools for accessing and working with fisheries data
+Version: 0.0.1
+Date: 2011-12-11
+Author: Carl Boettig <cboettig@gmail.com>
+Maintainer: Carl Boettig <cboettig@gmail.com>, Andrew Dyck <github@andrewdyck.com>
+Description: An R package for interacting with fisheries data (in development).
+Depends:
+    R (>= 2.13)
+Imports:
+    RCurl
+Suggests:
+    devtools
+URL: http://www.github.com/ropensci/rfisheries
+License: MIT
