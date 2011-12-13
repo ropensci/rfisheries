@@ -2,8 +2,8 @@ Package: rfisheries
 Title: R interface for fisheries data
 Version: 0.0.1
 Date: 2011-12-11
-Author: Carl Boettig <cboettig@gmail.com>
-Maintainer: Carl Boettig <cboettig@gmail.com>, Andrew Dyck <github@andrewdyck.com>
+Author: Carl Boettiger <cboettig@gmail.com>, Andrew Dyck <github@andrewdyck.com>
+Maintainer: Carl Boettiger <cboettig@gmail.com>, Andrew Dyck <github@andrewdyck.com> 
 Description: A programmatic interface to openfisheries.org 
   and related packages (In development).
 Depends:
