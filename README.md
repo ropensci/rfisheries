@@ -97,7 +97,8 @@ results <- ldply(c_list, function(x) {
 ```
 
 You can easily compare these results
-```
+```r
+library(ggplot2)
 ggplot(results, aes(year, catch, group = country, color = country)) + geom_line()
 ```
 ![](https://raw.github.com/ropensci/rfisheries/master/multiple_countries.png)
