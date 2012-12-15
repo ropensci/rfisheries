@@ -6,7 +6,7 @@ This package provides programmatic access to the [openfisheries](http://openfish
 # Installing #
 To install, you'll need the `devtools` package first.
 
-```
+```r
 install.packages('devtools')  
 library(devtools)
 install_github('rfisheries', 'ropensci')
@@ -80,7 +80,7 @@ country_codes()
 6         Angola   AGO
 ```
 
-To get landings data for several countries:
+## Example: Landings data for several countries
 
 ```r
 library(plyr)
