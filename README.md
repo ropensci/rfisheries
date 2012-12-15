@@ -91,7 +91,7 @@ c_list <- countries[sample(nrow(countries),5),]$iso3c
 # and grab landings data for these countries
 results <- ldply(c_list, function(x) {
     df <- landings(country = x)
-    df$country = x
+    df$country  <-  x
     df
 }, .progress = 'text')
 ```
