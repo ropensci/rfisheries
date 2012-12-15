@@ -1,16 +1,22 @@
 Package: rfisheries
 Title: R interface for fisheries data
-Version: 0.0.1
-Date: 2011-12-11
-Author: Carl Boettiger <cboettig@gmail.com>, Andrew Dyck <github@andrewdyck.com>
-Maintainer: Carl Boettiger <cboettig@gmail.com>, Andrew Dyck <github@andrewdyck.com> 
-Description: A programmatic interface to openfisheries.org 
-  and related packages (In development).
+Version: 0.0.3
+Date: 2012-12-12
+Author: Karthik Ram <karthik.ram@gmail.com>, Carl Boettiger, Andrew Dyck
+    <github@andrewdyck.com>
+Maintainer: Karthik Ram <karthik.ram@gmail.com>
+Description: A programmatic interface to openfisheries.org
 Depends:
-    R (>= 2.13)
+    R (>= 2.15),
+    plyr,
+    RCurl,
+    RJSONIO
 Imports:
     RCurl
-Suggests:
-    devtools
 URL: http://www.github.com/ropensci/rfisheries
-License: BSD
+Bugs: http://www.github.com/ropensci/rfisheries/issues/new
+License: CC0
+Collate:
+    'country_codes.R'
+    'landings.R'
+    'species_codes.R'
