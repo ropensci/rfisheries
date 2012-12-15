@@ -1,5 +1,5 @@
 # rfisheries #
-![](betalogo.png)
+![](https://raw.github.com/ropensci/rfisheries/master/betaLogo.png)
 
 This package provides programmatic access to the [openfisheries](http://openfisheries.org/) [API](http://openfisheries.org/api-info).
 
@@ -100,7 +100,7 @@ You can easily compare these results
 ```
 ggplot(results, aes(year, catch, group = country, color = country)) + geom_line()
 ```
-![](multiple_countries.png)
+![](https://raw.github.com/ropensci/rfisheries/master/multiple_countries.png)
 
 Similarly you can get landings data for multiple species. As the API evolves, we'll update the package and get it to CRAN at some point. 
 
