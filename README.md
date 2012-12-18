@@ -17,6 +17,7 @@ install_github('rfisheries', 'ropensci')
 Package currently provides three basic functions. Landings data can be obtained by calling `landings()`
 
 ```r
+library(rfisheries)
 landings()
    catch year
 1 19234925 1950
