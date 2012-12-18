@@ -109,7 +109,8 @@ ggplot(results, aes(year, catch, group = country, color = country)) + geom_line(
 
 Similarly you can get landings data for multiple species. As the API evolves, we'll update the package and get it to CRAN at some point.
 
-[Issues and Bugs](https://github.com/ropensci/rfisheries/issues)
+[Please report and issues or bugs](https://github.com/ropensci/rfisheries/issues).
+
 License: CC0
 
 This package is part of the [rOpenSci](http://ropensci.org/packages) project.
