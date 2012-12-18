@@ -86,7 +86,7 @@ country_codes()
 
 ## Example: Compare landings from multiple countries
 
-```r
+```
 library(plyr)
 library(rfisheries)
 countries <- country_codes()
