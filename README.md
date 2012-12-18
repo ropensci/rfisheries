@@ -28,7 +28,7 @@ landings()
 6 27510779 1955
 ...
 
-# To get country specific data, provide a iso3c country code #
+# To get country specific data, provide a iso3c country code
 
 landings(country = "USA")
     catch year
@@ -40,7 +40,7 @@ landings(country = "USA")
 6 2621021 1955
 ...
 
-# To get species specific landings, provide the correct a3 code for the required species. #
+# To get species specific landings, provide the correct a3 code for the required species.
 
 landings(species = "SKJ")
    catch year
@@ -72,6 +72,8 @@ species_codes()
 5 Ukrainian brook lamprey
 6         Pouched lamprey
 ...
+
+# Similarly you can get a full list of country codes
 country_codes()
          country iso3c
 1    Afghanistan   AFG
@@ -82,7 +84,7 @@ country_codes()
 6         Angola   AGO
 ```
 
-## Example: Landings data for several countries
+## Example: Compare landings from multiple countries
 
 ```r
 library(plyr)
