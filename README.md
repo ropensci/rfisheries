@@ -86,11 +86,11 @@ country_codes()
 
 ## Example: Compare landings from multiple countries
 
-```
+```r
 library(plyr)
 library(rfisheries)
 countries <- country_codes()
-# let's take a small subset, say 5 random countries #
+# let's take a small subset, say 5 random countries
 c_list <- countries[sample(nrow(countries),5),]$iso3c
 # and grab landings data for these countries
 results <- ldply(c_list, function(x) {
