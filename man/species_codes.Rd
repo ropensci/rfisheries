@@ -16,8 +16,8 @@
 \description{
   Returns a data frame with scientific_name, taxocode,
   a3_code, isscaap, and English name. The a3_code is
-  required by \code{landings} to return species specific
-  landing data.
+  required by \code{\link{landings}} to return species
+  specific landing data.
 }
 \examples{
 \dontrun{

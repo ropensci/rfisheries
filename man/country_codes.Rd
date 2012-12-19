@@ -16,7 +16,8 @@
 \description{
   Function returns a data frame with country name and
   \code{iso3c} code which is required by the
-  \code{landings} function to return country specific data
+  \code{\link{landings}} function to return country
+  specific data
 }
 \examples{
 \dontrun{

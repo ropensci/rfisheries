@@ -1,7 +1,7 @@
 
 #' Download species data including three-letter ASFIS species code.
 #'
-#' Returns a data frame with scientific_name, taxocode, a3_code, isscaap, and English name. The a3_code is required by \code{landings} to return species specific landing data.
+#' Returns a data frame with scientific_name, taxocode, a3_code, isscaap, and English name. The a3_code is required by \code{\link{landings}} to return species specific landing data.
 #'
 #' @param  curl Pass curl handle when calling function recursively.
 #' @param  ... additional optional parameters
