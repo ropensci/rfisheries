@@ -10,28 +10,29 @@
 #' @examples \dontrun{
 #' landings()
 #' # Landings by country
-#' landings(country = "CAN")
+#' landings(country = 'CAN')
 #' #landings by species
-#' landings(species = "SKJ")
+#' landings(species = 'SKJ')
 #'}
-landings <- function(country = NA, species = NA, curl=getCurlHandle(), ...){
-
- if(!is.na(country) && !is.na(species))
- 	stop("Specify country or species but not both", call.=FALSE)
-
- if(is.na(country) && is.na(species)) {
-  url <- "http://openfisheries.org/api/landings"
-  } else if(!is.na(country) && is.na(species)) {
-  url <- paste0("http://openfisheries.org/api/landings/countries/", country)
-  	} else {
-  url <- paste0("http://openfisheries.org/api/landings/species/", species)
-  	}
-
-landings_data <- suppressWarnings(getForm(url, .opts = list(...), curl=curl))
-landings_data <- ldply(fromJSON(I(landings_data)))
-if(nrow(landings_data) == 0) {
-	stop("No data found", call.=FALSE)
-	} else {
-return(landings_data)
-}
-}
+landings <- function(country = NA, species = NA, curl = getCurlHandle(), 
+    ...) {
+    if (!is.na(country) && !is.na(species)) 
+        stop("Specify country or species but not both", call. = FALSE)
+    if (is.na(country) && is.na(species)) {
+        url <- "http://openfisheries.org/api/landings"
+    } else if (!is.na(country) && is.na(species)) {
+        url <- paste0("http://openfisheries.org/api/landings/countries/", 
+            country)
+    } else {
+        url <- paste0("http://openfisheries.org/api/landings/species/", 
+            species)
+    }
+    landings_data <- suppressWarnings(getForm(url, .opts = list(...), 
+        curl = curl))
+    landings_data <- ldply(fromJSON(I(landings_data)))
+    if (nrow(landings_data) == 0) {
+        stop("No data found", call. = FALSE)
+    } else {
+        return(landings_data)
+    }
+} 
