@@ -13,7 +13,7 @@ Depends:
 Imports:
     RCurl
 URL: http://www.github.com/ropensci/rfisheries
-Bugs: http://www.github.com/ropensci/rfisheries/issues/new
+BugReports: http://www.github.com/ropensci/rfisheries/issues/new
 License: CC0
 Collate:
     'country_codes.R'
