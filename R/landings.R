@@ -14,20 +14,20 @@
 #' #landings by species
 #' landings(species = 'SKJ')
 #'}
-landings <- function(country = NA, species = NA, curl = getCurlHandle(), 
+landings <- function(country = NA, species = NA, curl = getCurlHandle(),
     ...) {
-    if (!is.na(country) && !is.na(species)) 
+    if (!is.na(country) && !is.na(species))
         stop("Specify country or species but not both", call. = FALSE)
     if (is.na(country) && is.na(species)) {
         url <- "http://openfisheries.org/api/landings"
     } else if (!is.na(country) && is.na(species)) {
-        url <- paste0("http://openfisheries.org/api/landings/countries/", 
+        url <- paste0("http://openfisheries.org/api/landings/countries/",
             country)
     } else {
-        url <- paste0("http://openfisheries.org/api/landings/species/", 
+        url <- paste0("http://openfisheries.org/api/landings/species/",
             species)
     }
-    landings_data <- suppressWarnings(getForm(url, .opts = list(...), 
+    landings_data <- suppressWarnings(getForm(url, .opts = list(...),
         curl = curl))
     landings_data <- ldply(fromJSON(I(landings_data)))
     if (nrow(landings_data) == 0) {
@@ -35,4 +35,4 @@ landings <- function(country = NA, species = NA, curl = getCurlHandle(),
     } else {
         return(landings_data)
     }
-} 
+}
