@@ -36,9 +36,9 @@
 \dontrun{
 landings()
 # Landings by country
-landings(country = "CAN")
+landings(country = 'CAN')
 #landings by species
-landings(species = "SKJ")
+landings(species = 'SKJ')
 }
 }
 
