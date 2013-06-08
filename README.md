@@ -7,7 +7,7 @@ Open Fisheries is a platform that aggregates global fishery data and currently o
 # Installing #
 To install, you'll need the `devtools` package first.
 
-```r
+```coffee
 install.packages('devtools')
 library(devtools)
 install_github('rfisheries', 'ropensci')
@@ -16,7 +16,7 @@ install_github('rfisheries', 'ropensci')
 # Usage #
 Package currently provides three basic functions. Landings data can be obtained by calling `landings()`
 
-```r
+```coffee
 library(rfisheries)
 landings()
    catch year
@@ -55,7 +55,7 @@ landings(species = "SKJ")
 
 If you don't have know the correct species or country codes, you can get a complete list with the following two functions.
 
-```r
+```coffee
 species_codes()
          scientific_name   taxocode a3_code isscaap
 1     Petromyzon marinus 1020100101     LAU      25
@@ -86,7 +86,7 @@ country_codes()
 
 ## Example: Compare landings from multiple countries
 
-```r
+```coffee
 library(plyr)
 library(rfisheries)
 countries <- country_codes()
@@ -101,7 +101,7 @@ results <- ldply(c_list, function(x) {
 ```
 
 You can easily compare these results
-```r
+```coffee
 library(ggplot2)
 ggplot(results, aes(year, catch, group = country, color = country)) + geom_line()
 ```
