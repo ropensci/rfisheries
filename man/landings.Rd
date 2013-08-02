@@ -26,11 +26,11 @@
   The function returns aggregate landings data if no
   parameters are supplied. One could get country or
   species-specific data by specifying either one of those
-  options. Country must be provided as the iso3c code and
-  species must be supplied as a3_code. Supporting functions
-  \code{country_codes} and \code{species_codes} provide
-  that data and can be combined to return data for multiple
-  countries or species.
+  options. Country must be provided as the \code{iso3c}
+  code and species must be supplied as a3_code. Supporting
+  functions \code{country_codes} and \code{species_codes}
+  provide that data and can be combined to return data for
+  multiple countries or species.
 }
 \examples{
 \dontrun{

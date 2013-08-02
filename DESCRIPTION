@@ -2,7 +2,9 @@ Package: rfisheries
 Title: R interface for fisheries data
 Version: 0.0.3
 Date: 2012-12-12
-Author: Karthik Ram <karthik.ram@gmail.com>, Carl Boettiger, Andrew Dyck
+Authors@R: c(person("Karthik", "Ram", role = c("aut", "cre"), email =
+    "karthik.ram@gmail.com"), person("Carl", "Boettiger", role = "aut"),
+    person("Andrew", "Dyck", role = "aut"))
 Maintainer: Karthik Ram <karthik.ram@gmail.com>
 Description: A programmatic interface to openfisheries.org
 Depends:

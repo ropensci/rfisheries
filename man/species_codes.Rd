@@ -2,11 +2,15 @@
 \alias{species_codes}
 \title{Download species data including three-letter ASFIS species code.}
 \usage{
-  species_codes(curl = getCurlHandle(), ...)
+  species_codes(curl = getCurlHandle(), progress = "text",
+    ...)
 }
 \arguments{
   \item{curl}{Pass curl handle when calling function
   recursively.}
+
+  \item{progress}{Progress bar. Default is text. set to
+  \code{none} to suppress}
 
   \item{...}{additional optional parameters}
 }

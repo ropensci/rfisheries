@@ -1,6 +1,6 @@
 #' Returns landings data from the openfisheries API
 #'
-#' The function returns aggregate landings data if no parameters are supplied. One could get country or species-specific data by specifying either one of those options. Country must be provided as the iso3c code and species must be supplied as a3_code. Supporting functions \code{country_codes} and \code{species_codes} provide that data and can be combined to return data for multiple countries or species.
+#' The function returns aggregate landings data if no parameters are supplied. One could get country or species-specific data by specifying either one of those options. Country must be provided as the \code{iso3c} code and species must be supplied as a3_code. Supporting functions \code{country_codes} and \code{species_codes} provide that data and can be combined to return data for multiple countries or species.
 #' @param country Default is \code{NA}. Download country specific data by specifying the ISO-3166 alpha 3 country code.
 #' @param  species Default is \code{NA}. Download species specific data by specifying the three-letter ASFIS species code
 #' @param  curl Pass curl handle when calling function recursively.

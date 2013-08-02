@@ -3,13 +3,14 @@
 #' Returns a data frame with scientific_name, taxocode, a3_code, isscaap, and English name. The a3_code is required by \code{\link{landings}} to return species specific landing data.
 #'
 #' @param  curl Pass curl handle when calling function recursively.
+#' @param  progress Progress bar. Default is text. set to \code{none} to suppress
 #' @param  ... additional optional parameters
 #' @export
 #' @return data.frame
 #' @examples \dontrun{
 #' species_codes()
 #'}
-species_codes <- function(curl = getCurlHandle(), ...) {
+species_codes <- function(curl = getCurlHandle(), progress  = "text", ...) {
     url <- "http://openfisheries.org/api/landings/species"
     species <- suppressWarnings(getForm(url, .opts = list(...), curl = curl))
     species <- fromJSON(I(species))
@@ -17,6 +18,6 @@ species_codes <- function(curl = getCurlHandle(), ...) {
         if (x[4] == "NULL") 
             x[4] <- "NA"
         data.frame(x)
-    }, .progress = "text")
+    }, .progress = progress)
     return(species_list)
 } 

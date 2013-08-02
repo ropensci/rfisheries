@@ -11,8 +11,8 @@
 #'}
 country_codes <- function(curl = getCurlHandle(), ...) {
     url <- "http://openfisheries.org/api/landings/countries"
-    countries <- suppressWarnings(getForm(url, .opts = list(...), 
+    countries <- suppressWarnings(getForm(url, .opts = list(...),
         curl = curl))
     countries <- ldply(fromJSON(I(countries)))
     return(countries)
-} 
+}
