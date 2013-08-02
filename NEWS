@@ -1,3 +1,8 @@
 rfisheries 0.0.3
 ================
 * First release to CRAN
+
+rfisheries 0.0.4
+================
+* Added tests and some minor fixes
+
