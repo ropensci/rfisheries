@@ -1,4 +1,4 @@
-![](https://travis-ci.org/ropensci/ropensci.png)
+![](https://travis-ci.org/ropensci/rfisheries.png)
 
 # rfisheries #
 ![](https://raw.github.com/ropensci/rfisheries/master/betaLogo.png)
