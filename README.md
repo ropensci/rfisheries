@@ -1,3 +1,5 @@
+https://travis-ci.org/ropensci/ropensci.png
+
 # rfisheries #
 ![](https://raw.github.com/ropensci/rfisheries/master/betaLogo.png)
 
@@ -116,4 +118,4 @@ License: CC0
 This package is part of the [rOpenSci](http://ropensci.org/packages) project.
 
 
-[![](http://ropensci.org/public_images/package_footer.png)](http://ropensci.org)
+[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
