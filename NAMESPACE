@@ -1,4 +1,6 @@
 export(country_codes)
 export(landings)
 export(species_codes)
-importFrom(data.table,rbindlist)
+importFrom(RCurl,getCurlHandle)
+importFrom(RCurl,getForm)
+importFrom(RJSONIO,fromJSON)
