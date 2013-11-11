@@ -5,7 +5,7 @@
 #' @param  curl Pass curl handle when calling function recursively.
 #' @param  progress Progress bar. Default is text. set to \code{none} to suppress
 #' @param  ... additional optional parameters
-#' @ImportFrom RCurl getForm
+#' @importFrom RCurl getForm getCurlHandle
 #' @importFrom RJSONIO fromJSON
 #' @export
 #' @return data.frame
@@ -20,7 +20,7 @@ species_codes <- function(curl = getCurlHandle(), progress  = "text", ...) {
     x[["isscaap"]] <- ifelse(is.null(x[["isscaap"]]), NA, x[["isscaap"]])
     return(x)
 })
-    species_list <- do.call(rbind, species_without_null)
+    species_list <- as.data.frame(do.call(rbind, species_without_null))
     return(species_list)
 } 
 

@@ -6,7 +6,7 @@
 #' @param  curl Pass curl handle when calling function recursively.
 #' @param  ... additional optional parameters
 #' @export
-#' @ImportFrom RCurl getForm
+#' @importFrom RCurl getForm getCurlHandle
 #' @importFrom RJSONIO fromJSON
 #' @return data.frame
 #' @examples \dontrun{
@@ -33,8 +33,8 @@ landings <- function(country = NA, species = NA, curl = getCurlHandle(),
         curl = curl))
     landings_data_JSON <- fromJSON(I(landings_data))
     landings_data <- do.call(rbind, landings_data_JSON)
+    landings_data <- as.data.frame(landings_data)
 
-    
     # Add the species as a column to avoid ambguity
     if(!is.na(species))  landings_data <- cbind(landings_data, species)
     # Do the same with the country.

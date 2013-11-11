@@ -6,7 +6,7 @@
 #' @param  ... additional optional parameters
 #' @export
 #' @return data.frame
-#' @ImportFrom RCurl getForm
+#' @importFrom RCurl getForm getCurlHandle
 #' @importFrom RJSONIO fromJSON
 #' @examples \dontrun{
 #' country_codes()
@@ -16,6 +16,6 @@ country_codes <- function(curl = getCurlHandle(), ...) {
     countries <- suppressWarnings(getForm(url, .opts = list(...),
         curl = curl))
     countries <- fromJSON(I(countries))
-    countries <- do.call(rbind, countries)
+    countries <- as.data.frame(do.call(rbind, countries))
     return(countries)
 }
