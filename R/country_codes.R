@@ -9,7 +9,7 @@
 #' @examples \dontrun{
 #' country_codes()
 #'}
-country_codes <- function(curl = getCurlHandle(), ...) {
+of_country_codes <- function(curl = getCurlHandle(), ...) {
     url <- "http://openfisheries.org/api/landings/countries"
     countries <- suppressWarnings(getForm(url, .opts = list(...),
         curl = curl))

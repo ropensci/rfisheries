@@ -14,7 +14,7 @@
 #' #landings by species
 #' landings(species = 'SKJ')
 #'}
-landings <- function(country = NA, species = NA, curl = getCurlHandle(),
+of_landings <- function(country = NA, species = NA, curl = getCurlHandle(),
     ...) {
     if (!is.na(country) && !is.na(species))
         stop("Specify country or species but not both", call. = FALSE)

@@ -5,6 +5,7 @@
 #' @param  curl Pass curl handle when calling function recursively.
 #' @param  progress Progress bar. Default is text. set to \code{none} to suppress
 #' @param  ... additional optional parameters
+#' @importFrom data.table rbindlist
 #' @export
 #' @return data.frame
 #' @examples \dontrun{
@@ -14,10 +15,16 @@ species_codes <- function(curl = getCurlHandle(), progress  = "text", ...) {
     url <- "http://openfisheries.org/api/landings/species"
     species <- suppressWarnings(getForm(url, .opts = list(...), curl = curl))
     species <- fromJSON(I(species))
-    species_list <- ldply(species, function(x) {
-        if (x[4] == "NULL") 
-            x[4] <- "NA"
-        data.frame(x)
-    }, .progress = progress)
+    species_without_null <- lapply(species, function(x) {
+    x[["isscaap"]] <- ifelse(is.null(x[["isscaap"]]), NA, x[["isscaap"]])
+    return(x)
+})
+    species_list <- do.call(rbind, species_without_null)
     return(species_list)
 } 
+
+
+
+
+
+
