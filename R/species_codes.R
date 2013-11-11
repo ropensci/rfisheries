@@ -5,7 +5,8 @@
 #' @param  curl Pass curl handle when calling function recursively.
 #' @param  progress Progress bar. Default is text. set to \code{none} to suppress
 #' @param  ... additional optional parameters
-#' @importFrom data.table rbindlist
+#' @ImportFrom RCurl getForm
+#' @importFrom RJSONIO fromJSON
 #' @export
 #' @return data.frame
 #' @examples \dontrun{

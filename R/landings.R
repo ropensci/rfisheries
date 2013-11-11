@@ -6,6 +6,8 @@
 #' @param  curl Pass curl handle when calling function recursively.
 #' @param  ... additional optional parameters
 #' @export
+#' @ImportFrom RCurl getForm
+#' @importFrom RJSONIO fromJSON
 #' @return data.frame
 #' @examples \dontrun{
 #' landings()
@@ -14,7 +16,7 @@
 #' #landings by species
 #' landings(species = 'SKJ')
 #'}
-of_landings <- function(country = NA, species = NA, curl = getCurlHandle(),
+landings <- function(country = NA, species = NA, curl = getCurlHandle(),
     ...) {
     if (!is.na(country) && !is.na(species))
         stop("Specify country or species but not both", call. = FALSE)
