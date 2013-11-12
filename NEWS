@@ -1,8 +1,16 @@
-rfisheries 0.0.3
+rfisheries 0.0.5
 ================
-* First release to CRAN
+* Significant speed improvements. 
+
 
 rfisheries 0.0.4
 ================
 * Added tests and some minor fixes
+
+
+rfisheries 0.0.3
+================
+* First release to CRAN
+
+
 
