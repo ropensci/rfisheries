@@ -117,5 +117,21 @@ License: CC0
 
 This package is part of the [rOpenSci](http://ropensci.org/packages) project.
 
+To cite package ‘rfisheries’ in publications use:
 
+```coffee
+  Karthik Ram, Carl Boettiger and Andrew Dyck (2013). rfisheries: R
+  interface for fisheries data. R package version 0.0.5.
+  http://CRAN.R-project.org/package=rfisheries
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {rfisheries: R interface for fisheries data},
+    author = {Karthik Ram and Carl Boettiger and Andrew Dyck},
+    year = {2013},
+    note = {R package version 0.0.5},
+    url = {http://CRAN.R-project.org/package=rfisheries},
+  }
+```
 [![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
