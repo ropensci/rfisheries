@@ -1,6 +1,8 @@
 export(country_codes)
+export(fish_plot)
 export(landings)
 export(species_codes)
 importFrom(RCurl,getCurlHandle)
 importFrom(RCurl,getForm)
 importFrom(RJSONIO,fromJSON)
+importFrom(ggplot2,ggplot)
