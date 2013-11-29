@@ -9,6 +9,7 @@
 #' @export
 #' @examples \dontrun{
 #' fish_plot(landings(country = 'CAN'))
+#' fish_plot(landings(species = 'COD'))
 #'}
 fish_plot <- function(x, linecolor = "steelblue", linesize = 0.9, title = NULL, ...) {
 
@@ -24,7 +25,7 @@ stopifnot(ncol(x) == 3)
 species_dataset <- c("catch","year", "species")
 country_dataset <- c("catch","year", "country")
 
-# Update ggplot theme for pltos
+# Update ggplot theme for plots
 old <- theme_get()
 
 
@@ -36,26 +37,26 @@ if(identical(species_dataset, names(x))) {
 
 if(is.null(title)) {
     data(species_code_data)
-    english_name <- species_code_data[which(species_code_data$a3_code == unique(x$species)) ,]$english_name
+    english_name <- species_code_data[which(species_code_data$a3_code == unique(x$species)), ]$english_name
     title <- paste0("Landings for ", english_name, " (", unique(x$species), ")")    
 }
 fish_plot <- ggplot(x, aes(year, catch)) + 
 geom_line(color = linecolor, size = linesize) + 
-labs(x= "Year", y = "Catch (in tonnes)") + 
+labs(x = "Year", y = "Catch (in tonnes)") + 
 ggtitle(title)
 }
 
 if(identical(country_dataset, names(x))) {
     if(is.null(title)) {
-        # [Todo]: Add species or country name into the title.
-    title <- paste0("Landings for ", unique(x$country))    
+     country_name <- country_code_data[which(country_code_data$iso3c == unique(x$country)), ]$country
+    title <- paste0("Landings for ", country_name, " (", unique(x$country), ")")    
     }
 fish_plot <-  ggplot(x, aes(year, catch)) + 
 geom_line(color = linecolor, size = linesize) + 
 labs(x = "Year", y = "Catch (in tonnes)") + 
 ggtitle(title)
 }
-# Add a theme
+# Reset theme back to old default.
 theme_set(old)
 # Return plot object
 return(fish_plot)
