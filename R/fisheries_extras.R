@@ -14,6 +14,7 @@ fish_plot <- function(x, linecolor = "steelblue", linesize = 0.9, title = NULL, 
 
 year <- NA 
 catch <- NA
+
 # Both datasets really should have 3 columns.
 # Otherwise something is wrong
 stopifnot(class(x) == "data.frame")
@@ -32,6 +33,7 @@ theme_update(panel.background = element_blank(), panel.grid.major = element_blan
         axis.line = element_line(colour = "black"))
 
 if(identical(species_dataset, names(x))) {
+
 if(is.null(title)) {
     data(species_code_data)
     english_name <- species_code_data[grep(unique(x$species),species_code_data),]$english_name
@@ -39,7 +41,7 @@ if(is.null(title)) {
 }
 fish_plot <- ggplot(x, aes(year, catch)) + 
 geom_line(color = linecolor, size = linesize) + 
-labs(x= "Year", y= "Catch (in tonnes)") + 
+labs(x= "Year", y = "Catch (in tonnes)") + 
 ggtitle(title)
 }
 
@@ -50,7 +52,7 @@ if(identical(country_dataset, names(x))) {
     }
 fish_plot <-  ggplot(x, aes(year, catch)) + 
 geom_line(color = linecolor, size = linesize) + 
-labs(x= "Year", y= "Catch (in tonnes)") + 
+labs(x = "Year", y = "Catch (in tonnes)") + 
 ggtitle(title)
 }
 # Add a theme
