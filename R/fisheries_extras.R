@@ -36,8 +36,8 @@ if(identical(species_dataset, names(x))) {
 
 if(is.null(title)) {
     data(species_code_data)
-    english_name <- species_code_data[grep(unique(x$species),species_code_data),]$english_name
-    title <- paste0("Landings for ", english_name, "(", unique(x$species), ")")    
+    english_name <- species_code_data[which(species_code_data$a3_code == unique(x$species)) ,]$english_name
+    title <- paste0("Landings for ", english_name, " (", unique(x$species), ")")    
 }
 fish_plot <- ggplot(x, aes(year, catch)) + 
 geom_line(color = linecolor, size = linesize) + 
