@@ -13,15 +13,17 @@
 #'}
 fish_plot <- function(x, linecolor = "steelblue", linesize = 0.9, title = NULL, ...) {
 
+# This weird step is just to satisfy the notes in check()
 year <- NA 
 catch <- NA
+
 
 # Both datasets really should have 3 columns.
 # Otherwise something is wrong
 stopifnot(class(x) == "data.frame")
 stopifnot(ncol(x) == 3)   
 
-# Allows to check which type of landings data we're working with
+# Allows to check which type of landings data we're working with (country or species)
 species_dataset <- c("catch","year", "species")
 country_dataset <- c("catch","year", "country")
 
@@ -45,6 +47,8 @@ geom_line(color = linecolor, size = linesize) +
 labs(x = "Year", y = "Catch (in tonnes)") + 
 ggtitle(title)
 }
+
+# Make an identical plot but this time if a country is specified instead of species.
 
 if(identical(country_dataset, names(x))) {
     if(is.null(title)) {

@@ -2,6 +2,7 @@ rfisheries 0.0.6
 ================
 * Added datasets. Now use cached to load a local copy quickly.
 * Added visualization capabilites. 
+* Replaced RCurl and RJSONIO with httr
 
 rfisheries 0.0.5
 ================
