@@ -136,7 +136,7 @@ To cite package ‘rfisheries’ in publications use:
 
 ```coffee
   Karthik Ram, Carl Boettiger and Andrew Dyck (2013). rfisheries: R
-  interface for fisheries data. R package version 0.0.5.
+  interface for fisheries data. R package version 0.0.6.
   http://CRAN.R-project.org/package=rfisheries
 
 A BibTeX entry for LaTeX users is
