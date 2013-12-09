@@ -13,6 +13,7 @@ Depends:
 Imports:
     httr,
     data.table,
+    assertthat,
     ggplot2
 URL: http://www.github.com/ropensci/rfisheries
 BugReports: http://www.github.com/ropensci/rfisheries/issues/new

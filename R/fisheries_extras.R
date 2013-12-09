@@ -6,6 +6,7 @@
 #' @param linesize Default line size is 0.9
 #' @param title Plot title. Title is generated based on species or country code. Specify one here only if you need something else.
 #' @param ... additional arguments
+#' @import assertthat
 #' @export
 #' @examples \dontrun{
 #' fish_plot(landings(country = 'CAN'))
@@ -20,8 +21,10 @@ catch <- NA
 
 # Both datasets really should have 3 columns.
 # Otherwise something is wrong
-stopifnot(class(x) == "data.frame")
-stopifnot(ncol(x) == 3)   
+
+assertthat(not_empty(x))
+assertthat(are_equal(ncol(x), 3))
+stopifnot(class(x) == "data.frame") 
 
 # Allows to check which type of landings data we're working with (country or species)
 species_dataset <- c("catch","year", "species")
@@ -52,6 +55,7 @@ ggtitle(title)
 
 if(identical(country_dataset, names(x))) {
     if(is.null(title)) {
+    data(country_code_data)
      country_name <- country_code_data[which(country_code_data$iso3c == unique(x$country)), ]$country
     title <- paste0("Landings for ", country_name, " (", unique(x$country), ")")    
     }

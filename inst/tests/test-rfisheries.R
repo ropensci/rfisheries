@@ -12,5 +12,7 @@ lbysp <- landings(species = "SKJ")
     expect_that(sp, is_a("data.frame"))
     expect_that(landings, is_a("data.frame"))
     expect_that(lbysp, is_a("data.frame"))
+    expect_that(landings(species = "foo"), throws_error())
+    expect_that(landings(country = "foo"), throws_error())
 })
 
