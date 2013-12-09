@@ -111,6 +111,21 @@ ggplot(results, aes(year, catch, group = country, color = country)) + geom_line(
 
 Similarly you can get landings data for multiple species. As the API evolves, we'll update the package and get it to [CRAN](http://cran.r-project.org/) at some point.
 
+
+## Creative interactive charts
+
+Using the [rCharts library](http://ramnathv.github.io/rCharts/), it's easy to create interactive plots. Here's a quick example.
+
+```coffee
+library(rfisheries)
+library(rCharts)
+cod <- landings(species = "COD")
+cod$date <- paste0(cod$year, "-01", "-01")
+cod_plot <- mPlot(x = "date", y = "catch", type = "Line", data = cod)
+cod_plot$set(pointSize = 0, lineWidth = 1)
+cod_plot$print("COD landings data")
+cod_plot
+```
 [Please report any issues or bugs](https://github.com/ropensci/rfisheries/issues).
 
 License: CC0
