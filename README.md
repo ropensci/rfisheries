@@ -145,7 +145,7 @@ A BibTeX entry for LaTeX users is
     title = {rfisheries: R interface for fisheries data},
     author = {Karthik Ram and Carl Boettiger and Andrew Dyck},
     year = {2013},
-    note = {R package version 0.0.5},
+    note = {R package version 0.0.6},
     url = {http://CRAN.R-project.org/package=rfisheries},
   }
 ```
