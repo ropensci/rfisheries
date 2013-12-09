@@ -70,6 +70,3 @@ theme_set(old)
 return(fish_plot)
 }
 
-# [Todos]
-# Not a method for time being because we'd have to define a new class. @method plot rfisheries
-# Not defining a method for now. @S3method plot rfisheries
