@@ -31,13 +31,15 @@ landings <- function(country = NA, species = NA, foptions = list()) {
     landings_call <- GET(url, foptions)
     stop_for_status(landings_call)
     landings_data_JSON <- content(landings_call)
+    if(length(landings_data_JSON) == 0) {
+        landings_data <- data.frame()
+    } else {
     landings_data <- data.frame(rbindlist(landings_data_JSON))
-
     # Add the species as a column to avoid ambguity
     if(!is.na(species))  landings_data <- cbind(landings_data, species)
     # Do the same with the country.
     if(!is.na(country))  landings_data <- cbind(landings_data, country)
-
+    }
 
     if (nrow(landings_data) == 0) {
         stop("No data found", call. = FALSE)
