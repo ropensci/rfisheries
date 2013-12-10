@@ -1,6 +1,6 @@
 \name{fish_plot}
 \alias{fish_plot}
-\title{Plots data for an rfisheries object}
+\title{Plots data for an rfisheries result}
 \usage{
 fish_plot(x, linecolor = "steelblue", linesize = 0.9, title = NULL, ...)
 }
@@ -19,7 +19,7 @@ fish_plot(x, linecolor = "steelblue", linesize = 0.9, title = NULL, ...)
   \item{...}{additional arguments}
 }
 \description{
-Plots data for an rfisheries object
+Plots data for an rfisheries result
 }
 \examples{
 \dontrun{

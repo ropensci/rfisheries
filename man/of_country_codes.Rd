@@ -1,0 +1,24 @@
+\name{of_country_codes}
+\alias{of_country_codes}
+\title{Download full list of ISO-3166 alpha 3 country code.}
+\usage{
+of_country_codes(foptions = list())
+}
+\arguments{
+  \item{foptions}{additional curl options}
+}
+\value{
+data.frame
+}
+\description{
+Function returns a data frame with country name and
+\code{iso3c} code which is required by the
+\code{\link{landings}} function to return country specific
+data
+}
+\examples{
+\dontrun{
+of_country_codes()
+}
+}
+

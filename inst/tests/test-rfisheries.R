@@ -12,7 +12,18 @@ lbysp <- of_landings(species = "SKJ")
     expect_that(sp, is_a("data.frame"))
     expect_that(landings, is_a("data.frame"))
     expect_that(lbysp, is_a("data.frame"))
-    expect_that(of_landings(species = "foo"), throws_error())
+    expect_equal(ncol(sp), 3)
+    expect_equal(ncol(cc), 3)
+    expect_equal(ncol(landings), 3)
+})
+
+
+test_that("Ensure that functions fail when presented with bad arguments", {
+	expect_that(of_landings(species = "foo"), throws_error())
     expect_that(of_landings(country = "foo"), throws_error())
 })
 
+test_that("Visualizations are of the right class", {
+	test_plot <- fish_plot(of_landings(species = "COD"))
+	expect_that(test_plot, is_a("ggplot"))
+})

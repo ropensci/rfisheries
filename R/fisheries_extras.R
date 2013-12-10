@@ -1,4 +1,4 @@
-#' Plots data for an rfisheries object
+#' Plots data for an rfisheries result
 #' 
 #'@importFrom ggplot2 ggplot theme_get theme_update ggtitle geom_line labs theme_set element_line element_blank aes
 #' @param x A landings dataset belonging to either a species or a country.
@@ -25,6 +25,7 @@ country_code_data <- NA
 
 assert_that(not_empty(x))
 assert_that(are_equal(ncol(x), 3))
+# This needs to be a new assertion but I haven't figured out how to write new assertions for assert_that.
 stopifnot(class(x) == "data.frame") 
 
 # Allows to check which type of landings data we're working with (country or species)

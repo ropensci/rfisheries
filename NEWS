@@ -3,7 +3,7 @@ rfisheries 0.0.6
 * Added datasets. Now use cached to load a local copy quickly.
 * Added visualization capabilites. 
 * Replaced RCurl and RJSONIO with httr
-* Added of prefix to function names to avoid namespace conflict.
+* Added "of_" (short for open fisheries) prefix to function names to avoid namespace conflict with other packages.
 
 rfisheries 0.0.5
 ================
