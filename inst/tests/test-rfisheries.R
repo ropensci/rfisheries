@@ -1,5 +1,5 @@
 # tests for alm fxn in alm
-context("rfisheries")
+context("Testing main functions")
 
 test_that("Main functions return data.frames", {
 cc <- of_country_codes()
@@ -12,9 +12,10 @@ lbysp <- of_landings(species = "SKJ")
     expect_that(sp, is_a("data.frame"))
     expect_that(landings, is_a("data.frame"))
     expect_that(lbysp, is_a("data.frame"))
-    expect_equal(ncol(sp), 3)
-    expect_equal(ncol(cc), 3)
+    expect_equal(ncol(sp), 5)
+    expect_equal(ncol(cc), 2)
     expect_equal(ncol(landings), 3)
+
 })
 
 
@@ -22,6 +23,7 @@ test_that("Ensure that functions fail when presented with bad arguments", {
 	expect_that(of_landings(species = "foo"), throws_error())
     expect_that(of_landings(country = "foo"), throws_error())
 })
+
 
 test_that("Visualizations are of the right class", {
 	test_plot <- fish_plot(of_landings(species = "COD"))

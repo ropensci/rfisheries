@@ -9,16 +9,15 @@
 #' @importFrom assertthat not_empty are_equal assert_that
 #' @export
 #' @examples \dontrun{
-#' fish_plot(landings(country = 'CAN'))
-#' fish_plot(landings(species = 'COD'))
+#' fish_plot(of_landings(country = 'CAN'))
+#' fish_plot(of_landings(species = 'COD'))
 #'}
 fish_plot <- function(x, linecolor = "steelblue", linesize = 0.9, title = NULL, ...) {
 
 # This weird step is just to satisfy the notes in check()
 year <- NA 
 catch <- NA
-species_code_data <- NA
-country_code_data <- NA
+
 
 # Both datasets really should have 3 columns.
 # Otherwise something is wrong

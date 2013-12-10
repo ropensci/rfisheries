@@ -10,6 +10,12 @@ Open Fisheries is a platform that aggregates global fishery data and currently o
 To install, you'll need the `devtools` package first.
 
 ```coffee
+install.packages("rfisheries")
+```
+
+or grab the development version.
+
+```coffee
 install.packages('devtools')
 library(devtools)
 install_github('rfisheries', 'ropensci')

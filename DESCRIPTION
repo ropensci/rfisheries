@@ -15,6 +15,7 @@ Imports:
     data.table,
     assertthat,
     ggplot2
+LazyData: yes
 URL: http://www.github.com/ropensci/rfisheries
 BugReports: http://www.github.com/ropensci/rfisheries/issues/new
 License: CC0

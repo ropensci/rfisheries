@@ -23,8 +23,8 @@ Plots data for an rfisheries result
 }
 \examples{
 \dontrun{
-fish_plot(landings(country = 'CAN'))
-fish_plot(landings(species = 'COD'))
+fish_plot(of_landings(country = 'CAN'))
+fish_plot(of_landings(species = 'COD'))
 }
 }
 
