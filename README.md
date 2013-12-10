@@ -7,13 +7,13 @@ This package provides programmatic access to the [openfisheries](http://openfish
 Open Fisheries is a platform that aggregates global fishery data and currently offers global fish capture landings from 1950 onwards (more data coming soon). Read more about that effort [here](http://openfisheries.org/about).
 
 # Installing #
-To install, you'll need the `devtools` package first.
 
 ```coffee
 install.packages("rfisheries")
 ```
 
-or grab the development version.
+or grab the development version. To install this version you'll need the `devtools` package first.
+
 
 ```coffee
 install.packages('devtools')
