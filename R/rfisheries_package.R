@@ -23,5 +23,16 @@ NULL
 NULL
 
 
+#' Deprecated functions in rgbif
+#' 
+#' \itemize{
+#'  \item \code{\link{country_codes}}: service no longer provided
+#'  \item \code{\link{species_codes}}: service no longer provided
+#'  \item \code{\link{landings}}: service no longer provided
+#'  \item \code{\link{fish_plot}}: service no longer provided
 
+#' }
+#' 
+#' @name rfisheries-deprecated
+NULL
 

@@ -9,13 +9,13 @@
 #' @importFrom data.table rbindlist
 #' @return data.frame
 #' @examples \dontrun{
-#' landings()
+#' of_landings()
 #' # Landings by country
-#' landings(country = 'CAN')
+#' of_landings(country = 'CAN')
 #' #landings by species
-#' landings(species = 'SKJ')
+#' of_landings(species = 'SKJ')
 #'}
-landings <- function(country = NA, species = NA, foptions = list()) {
+of_landings <- function(country = NA, species = NA, foptions = list()) {
     if (!is.na(country) && !is.na(species))
         stop("Specify country or species but not both", call. = FALSE)
     if (is.na(country) && is.na(species)) {
@@ -46,5 +46,13 @@ landings <- function(country = NA, species = NA, foptions = list()) {
     } else {
         return(landings_data)
     }
+}
+
+
+#' @rdname country_codes-deprecated
+#' @export
+landings <- function()
+{
+  .Deprecated(new="of_landings", package="rfisheries", msg="This function is deprecated, and will be removed in a future version. See ?of_landings")
 }
 

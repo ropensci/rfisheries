@@ -2,17 +2,17 @@
 context("rfisheries")
 
 test_that("Main functions return data.frames", {
-cc <- country_codes()
-sp <- species_codes()
+cc <- of_country_codes()
+sp <- of_species_codes()
 # landings by country
-landings <- landings(country = 'CAN')
+landings <- of_landings(country = 'CAN')
 # landings by species
-lbysp <- landings(species = "SKJ")
+lbysp <- of_landings(species = "SKJ")
     expect_that(cc, is_a("data.frame"))
     expect_that(sp, is_a("data.frame"))
     expect_that(landings, is_a("data.frame"))
     expect_that(lbysp, is_a("data.frame"))
-    expect_that(landings(species = "foo"), throws_error())
-    expect_that(landings(country = "foo"), throws_error())
+    expect_that(of_landings(species = "foo"), throws_error())
+    expect_that(of_landings(country = "foo"), throws_error())
 })
 
