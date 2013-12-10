@@ -122,8 +122,7 @@ library(rCharts)
 cod <- of_landings(species = "COD")
 cod$date <- paste0(cod$year, "-01", "-01")
 cod_plot <- mPlot(x = "date", y = "catch", type = "Line", data = cod)
-cod_plot$set(pointSize = 0, lineWidth = 1)
-cod_plot$print("COD landings data")
+cod_plot$set(pointSize = 0, lineWidth = 4)
 cod_plot
 ```
 [Please report any issues or bugs](https://github.com/ropensci/rfisheries/issues).
