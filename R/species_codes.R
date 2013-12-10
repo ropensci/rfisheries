@@ -9,14 +9,14 @@
 #' @export
 #' @return data.frame
 #' @examples \dontrun{
-#' species_list <- species_codes()
+#' of_species_list <- species_codes()
 #'}
-species_codes <- function(foptions = list()) {
+of_species_codes <- function(foptions = list()) {
     url <- "http://openfisheries.org/api/landings/species"
     species <- GET(url, foptions)
     stop_for_status(species)
     species_data <- content(species)
-    species_data <- llply(species_data, spfillnull)
+    species_data <- lapply(species_data, spfillnull)
     species_data_frame <- data.frame(rbindlist(species_data))
     species_data_frame
 } 
@@ -26,4 +26,14 @@ species_codes <- function(foptions = list()) {
 spfillnull <- function(x) {
   x[["isscaap"]] <- ifelse(is.null(x[["isscaap"]]), NA, x[["isscaap"]])
  as.list(x, stringsAsFactors = FALSE)
+}
+
+#' species_codes
+#'
+#' Function now replaced by \code{of_species_code}
+#' @rdname species_codes-deprecated
+#' @export
+species_codes <- function()
+{
+  .Deprecated(new="of_species_codes", package="rfisheries", msg="This function is deprecated, and will be removed in a future version. See ?of_species_codes")
 }

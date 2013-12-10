@@ -20,7 +20,7 @@ Package currently provides three basic functions. Landings data can be obtained 
 
 ```coffee
 library(rfisheries)
-landings()
+of_landings()
    catch year
 1 19234925 1950
 2 21691884 1951
@@ -32,7 +32,7 @@ landings()
 
 # To get country specific data, provide a iso3c country code
 
-landings(country = "USA")
+of_landings(country = "USA")
     catch year
 1 2629961 1950
 2 2452312 1951
@@ -44,7 +44,7 @@ landings(country = "USA")
 
 # To get species specific landings, provide the correct a3 code for the required species.
 
-landings(species = "SKJ")
+of_landings(species = "SKJ")
    catch year
 1 162750 1950
 2 185848 1951
@@ -58,7 +58,7 @@ landings(species = "SKJ")
 If you don't have know the correct species or country codes, you can get a complete list with the following two functions.
 
 ```coffee
-species_codes()
+of_species_codes()
          scientific_name   taxocode a3_code isscaap
 1     Petromyzon marinus 1020100101     LAU      25
 2   Lampetra fluviatilis 1020100201     LAR      25
@@ -76,7 +76,7 @@ species_codes()
 ...
 
 # Similarly you can get a full list of country codes
-country_codes()
+of_country_codes()
          country iso3c
 1    Afghanistan   AFG
 2        Albania   ALB
@@ -91,12 +91,12 @@ country_codes()
 ```coffee
 library(plyr)
 library(rfisheries)
-countries <- country_codes()
+countries <- of_country_codes()
 # let's take a small subset, say 5 random countries
 c_list <- countries[sample(nrow(countries), 5),]$iso3c
 # and grab landings data for these countries
 results <- ldply(c_list, function(x) {
-    df <- landings(country = x)
+    df <- of_landings(country = x)
     df$country  <-  x
     df
 }, .progress = 'text')
@@ -119,7 +119,7 @@ Using the [rCharts library](http://ramnathv.github.io/rCharts/), it's easy to cr
 ```coffee
 library(rfisheries)
 library(rCharts)
-cod <- landings(species = "COD")
+cod <- of_landings(species = "COD")
 cod$date <- paste0(cod$year, "-01", "-01")
 cod_plot <- mPlot(x = "date", y = "catch", type = "Line", data = cod)
 cod_plot$set(pointSize = 0, lineWidth = 1)

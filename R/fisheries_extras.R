@@ -6,7 +6,7 @@
 #' @param linesize Default line size is 0.9
 #' @param title Plot title. Title is generated based on species or country code. Specify one here only if you need something else.
 #' @param ... additional arguments
-#' @import assertthat
+#' @importFrom assertthat not_empty are_equal assert_that
 #' @export
 #' @examples \dontrun{
 #' fish_plot(landings(country = 'CAN'))
@@ -17,13 +17,14 @@ fish_plot <- function(x, linecolor = "steelblue", linesize = 0.9, title = NULL, 
 # This weird step is just to satisfy the notes in check()
 year <- NA 
 catch <- NA
-
+species_code_data <- NA
+country_code_data <- NA
 
 # Both datasets really should have 3 columns.
 # Otherwise something is wrong
 
-assertthat(not_empty(x))
-assertthat(are_equal(ncol(x), 3))
+assert_that(not_empty(x))
+assert_that(are_equal(ncol(x), 3))
 stopifnot(class(x) == "data.frame") 
 
 # Allows to check which type of landings data we're working with (country or species)
@@ -41,7 +42,6 @@ theme_update(panel.background = element_blank(), panel.grid.major = element_blan
 if(identical(species_dataset, names(x))) {
 
 if(is.null(title)) {
-    data(species_code_data)
     english_name <- species_code_data[which(species_code_data$a3_code == unique(x$species)), ]$english_name
     title <- paste0("Landings for ", english_name, " (", unique(x$species), ")")    
 }
@@ -55,7 +55,6 @@ ggtitle(title)
 
 if(identical(country_dataset, names(x))) {
     if(is.null(title)) {
-    data(country_code_data)
      country_name <- country_code_data[which(country_code_data$iso3c == unique(x$country)), ]$country
     title <- paste0("Landings for ", country_name, " (", unique(x$country), ")")    
     }
@@ -69,4 +68,3 @@ theme_set(old)
 # Return plot object
 return(fish_plot)
 }
-
