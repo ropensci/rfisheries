@@ -25,5 +25,5 @@ of_country_codes <- function(foptions = list()) {
 #' @export
 #' @rdname country_codes-deprecated
 country_codes <- function() {
-  .Deprecated(new="of_country_codes", package="rfisheries", msg="This function is deprecated, and will be removed in a future version. See ?of_country_codes")
+  .Deprecated(new = "of_country_codes", package = "rfisheries", msg = "This function is deprecated, and will be removed in a future version. See ?of_country_codes")
 }

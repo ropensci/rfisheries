@@ -17,8 +17,7 @@ fish_plot <- function(x, linecolor = "steelblue", linesize = 0.9, title = NULL, 
 # This weird step is just to satisfy the notes in check()
 year <- NA 
 catch <- NA
-
-
+x[,3] <- toupper(x[, 3])
 # Both datasets really should have 3 columns.
 # Otherwise something is wrong
 

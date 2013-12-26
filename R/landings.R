@@ -42,7 +42,8 @@ of_landings <- function(country = NA, species = NA, foptions = list()) {
     }
 
     if (nrow(landings_data) == 0) {
-        stop("No data found", call. = FALSE)
+        # stop("No data found", call. = FALSE)
+        return(NULL)
     } else {
         return(landings_data)
     }
@@ -53,6 +54,6 @@ of_landings <- function(country = NA, species = NA, foptions = list()) {
 #' @export
 landings <- function()
 {
-  .Deprecated(new="of_landings", package="rfisheries", msg="This function is deprecated, and will be removed in a future version. See ?of_landings")
+  .Deprecated(new = "of_landings", package = "rfisheries", msg = "This function is deprecated, and will be removed in a future version. See ?of_landings")
 }
 

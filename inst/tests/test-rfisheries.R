@@ -29,3 +29,7 @@ test_that("Visualizations are of the right class", {
 	test_plot <- fish_plot(of_landings(species = "COD"))
 	expect_that(test_plot, is_a("ggplot"))
 })
+
+test_that("Functions fail when expected", {
+    expect_error(of_landings(species = "foo", country = "foo"))
+})
