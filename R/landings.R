@@ -5,6 +5,7 @@
 #' @param  species Default is \code{NA}. Download species specific data by specifying the three-letter ASFIS species code
 #' @param foptions additional optional parameters
 #' @export
+#' @import rjson
 #' @importFrom httr GET content stop_for_status
 #' @importFrom data.table rbindlist
 #' @return data.frame

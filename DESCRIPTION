@@ -14,7 +14,8 @@ Imports:
     httr,
     data.table,
     assertthat,
-    ggplot2
+    ggplot2,
+    rjson
 LazyData: yes
 URL: http://www.github.com/ropensci/rfisheries
 BugReports: http://www.github.com/ropensci/rfisheries/issues/new
