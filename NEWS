@@ -1,3 +1,7 @@
+rfisheries 0.1
+================
+* Minor bug fixes and improvements
+
 rfisheries 0.0.6
 ================
 * Added datasets. Now use cached to load a local copy quickly.
