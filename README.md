@@ -141,7 +141,7 @@ To cite package ‘rfisheries’ in publications use:
 
 ```coffee
   Karthik Ram, Carl Boettiger and Andrew Dyck (2013). rfisheries: R
-  interface for fisheries data. R package version 0.0.6.
+  interface for fisheries data. R package version 0.1.
   http://CRAN.R-project.org/package=rfisheries
 
 A BibTeX entry for LaTeX users is
@@ -150,7 +150,7 @@ A BibTeX entry for LaTeX users is
     title = {rfisheries: R interface for fisheries data},
     author = {Karthik Ram and Carl Boettiger and Andrew Dyck},
     year = {2013},
-    note = {R package version 0.0.6},
+    note = {R package version 0.1},
     url = {http://CRAN.R-project.org/package=rfisheries},
   }
 ```
