@@ -18,7 +18,7 @@ landing data.
 }
 \examples{
 \dontrun{
-of_species_list <- species_codes()
+of_species_list <- of_species_codes()
 }
 }
 

@@ -14,6 +14,7 @@
 #'}
 fish_plot <- function(x, linecolor = "steelblue", linesize = 0.9, title = NULL, ...) {
 
+assert_that(class(x) == "data.frame")
 # This weird step is just to satisfy the notes in check()
 year <- NA 
 catch <- NA

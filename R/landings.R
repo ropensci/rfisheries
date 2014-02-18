@@ -44,9 +44,9 @@ of_landings <- function(country = NA, species = NA, foptions = list()) {
 
     if (nrow(landings_data) == 0) {
         # stop("No data found", call. = FALSE)
-        return(NULL)
+        NULL
     } else {
-        return(landings_data)
+        landings_data
     }
 }
 

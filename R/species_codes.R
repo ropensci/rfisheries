@@ -9,7 +9,7 @@
 #' @export
 #' @return data.frame
 #' @examples \dontrun{
-#' of_species_list <- species_codes()
+#' of_species_list <- of_species_codes()
 #'}
 of_species_codes <- function(foptions = list()) {
     url <- "http://openfisheries.org/api/landings/species"
