@@ -1,7 +1,7 @@
-![](https://travis-ci.org/ropensci/rfisheries.png)
+![travis](https://travis-ci.org/ropensci/rfisheries.png)
 
 # rfisheries #
-![](https://raw.github.com/ropensci/rfisheries/master/betaLogo.png)
+![beta logo](https://raw.github.com/ropensci/rfisheries/master/betaLogo.png)
 
 This package provides programmatic access to the [openfisheries](http://openfisheries.org/) [API](http://openfisheries.org/api-info).
 Open Fisheries is a platform that aggregates global fishery data and currently offers global fish capture landings from 1950 onwards (more data coming soon). Read more about that effort [here](http://openfisheries.org/about).
@@ -113,7 +113,7 @@ You can easily compare these results
 library(ggplot2)
 ggplot(results, aes(year, catch, group = country, color = country)) + geom_line()
 ```
-![](https://raw.github.com/ropensci/rfisheries/master/multiple_countries.png)
+![multiple countries](https://raw.github.com/ropensci/rfisheries/master/multiple_countries.png)
 
 Similarly you can get landings data for multiple species. As the API evolves, we'll update the package and get it to [CRAN](http://cran.r-project.org/) at some point.
 
@@ -154,4 +154,4 @@ A BibTeX entry for LaTeX users is
     url = {http://CRAN.R-project.org/package=rfisheries},
   }
 ```
-[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
