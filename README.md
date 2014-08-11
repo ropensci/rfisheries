@@ -1,4 +1,6 @@
-![travis](https://travis-ci.org/ropensci/rfisheries.png)
+
+Linux: ![travis](https://travis-ci.org/ropensci/rfisheries.png)  
+Windows: [![Build status](https://ci.appveyor.com/api/projects/status/agi7g487s4g53u4p)](https://ci.appveyor.com/project/karthik/rfisheries)
 
 # rfisheries #
 ![beta logo](https://raw.github.com/ropensci/rfisheries/master/betaLogo.png)
