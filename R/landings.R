@@ -28,7 +28,6 @@ of_landings <- function(country = NA, species = NA, foptions = list()) {
         url <- paste0("http://openfisheries.org/api/landings/species/",
             species, ".json")
     }
-    browser()
     landings_call <- GET(url, foptions)
     stop_for_status(landings_call)
     landings_data_JSON <- content(landings_call)
