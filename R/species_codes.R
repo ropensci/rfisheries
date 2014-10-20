@@ -12,7 +12,7 @@
 #' of_species_list <- of_species_codes()
 #'}
 of_species_codes <- function(foptions = list()) {
-    url <- "http://openfisheries.org/api/landings/species"
+    url <- "http://openfisheries.org/api/landings/species.json"
     species <- GET(url, foptions)
     stop_for_status(species)
     species_data <- content(species)
