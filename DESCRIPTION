@@ -1,6 +1,6 @@
 Package: rfisheries
 Title: R interface for fisheries data
-Version: 0.1.1
+Version: 0.1.1.99
 Date: 2013-12-09
 Authors@R: c(person("Karthik", "Ram", role = c("aut", "cre"), email =
     "karthik.ram@gmail.com"), person("Carl", "Boettiger", role = "aut"),
