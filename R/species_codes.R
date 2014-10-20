@@ -17,7 +17,7 @@ of_species_codes <- function(foptions = list()) {
     stop_for_status(species)
     species_data <- content(species)
     species_data <- lapply(species_data, spfillnull)
-    species_data_frame <- data.frame(rbindlist(species_data))
+    species_data_frame <- data.frame(rbindlist(species_data), stringsAsFactors = FALSE)
     species_data_frame
 } 
 
