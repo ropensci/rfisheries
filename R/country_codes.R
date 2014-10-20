@@ -11,11 +11,11 @@
 #' of_country_codes()
 #'}
 of_country_codes <- function(foptions = list()) {
-    url <- "http://openfisheries.org/api/landings/countries"
+    url <- "http://openfisheries.org/api/landings/countries.json"
     countries_call <- GET(url, foptions)
     stop_for_status(countries_call)
     countries<- content(countries_call)
-    countries <- data.frame(rbindlist(countries))
+    countries <- data.frame(rbindlist(countries), stringsAsFactors = FALSE)
     return(countries)
 }
 
