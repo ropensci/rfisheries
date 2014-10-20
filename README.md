@@ -10,23 +10,23 @@ Open Fisheries is a platform that aggregates global fishery data and currently o
 
 # Installing #
 
-```coffee
+```r
 install.packages("rfisheries")
 ```
 
 or grab the development version. To install this version you'll need the `devtools` package first.
 
 
-```coffee
+```r
 install.packages('devtools')
 library(devtools)
-install_github('rfisheries', 'ropensci')
+install_github('ropensci/rfisheries')
 ```
 
 # Usage #
 Package currently provides three basic functions. Landings data can be obtained by calling `landings()`
 
-```coffee
+```r
 library(rfisheries)
 of_landings()
    catch year
@@ -65,7 +65,7 @@ of_landings(species = "SKJ")
 
 If you don't have know the correct species or country codes, you can get a complete list with the following two functions.
 
-```coffee
+```r
 of_species_codes()
          scientific_name   taxocode a3_code isscaap
 1     Petromyzon marinus 1020100101     LAU      25
@@ -96,7 +96,7 @@ of_country_codes()
 
 ## Example: Compare landings from multiple countries
 
-```coffee
+```r
 library(plyr)
 library(rfisheries)
 countries <- of_country_codes()
@@ -111,7 +111,7 @@ results <- ldply(c_list, function(x) {
 ```
 
 You can easily compare these results
-```coffee
+```r
 library(ggplot2)
 ggplot(results, aes(year, catch, group = country, color = country)) + geom_line()
 ```
@@ -124,7 +124,7 @@ Similarly you can get landings data for multiple species. As the API evolves, we
 
 Using the [rCharts library](http://ramnathv.github.io/rCharts/), it's easy to create interactive plots. Here's a quick example.
 
-```coffee
+```r
 library(rfisheries)
 library(rCharts)
 cod <- of_landings(species = "COD")
@@ -141,7 +141,7 @@ This package is part of the [rOpenSci](http://ropensci.org/packages) project.
 
 To cite package ‘rfisheries’ in publications use:
 
-```coffee
+```r
   Karthik Ram, Carl Boettiger and Andrew Dyck (2013). rfisheries: R
   interface for fisheries data. R package version 0.1.
   http://CRAN.R-project.org/package=rfisheries
