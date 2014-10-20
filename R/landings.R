@@ -14,7 +14,7 @@
 #' # Landings by country
 #' of_landings(country = 'CAN')
 #' #landings by species
-#' of_landings(species = 'SKJ')
+#' of_landings(species = 'COD')
 #'}
 of_landings <- function(country = NA, species = NA, foptions = list()) {
     if (!is.na(country) && !is.na(species))
@@ -23,12 +23,12 @@ of_landings <- function(country = NA, species = NA, foptions = list()) {
         url <- "http://openfisheries.org/api/landings"
     } else if (!is.na(country) && is.na(species)) {
         url <- paste0("http://openfisheries.org/api/landings/countries/",
-            country)
+            country, ".json")
     } else {
         url <- paste0("http://openfisheries.org/api/landings/species/",
-            species)
+            species, ".json")
     }
-
+    browser()
     landings_call <- GET(url, foptions)
     stop_for_status(landings_call)
     landings_data_JSON <- content(landings_call)
