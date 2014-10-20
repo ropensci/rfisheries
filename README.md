@@ -18,9 +18,8 @@ or grab the development version. To install this version you'll need the `devtoo
 
 
 ```r
-install.packages('devtools')
-library(devtools)
-install_github('ropensci/rfisheries')
+# install.packages('devtools')
+devtools::install_github('ropensci/rfisheries')
 ```
 
 # Usage #
