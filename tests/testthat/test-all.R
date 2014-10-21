@@ -20,8 +20,8 @@ lbysp <- of_landings(species = "SKJ")
 
 
 test_that("Ensure that functions fail when presented with bad arguments", {
-	expect_equal(of_landings(species = "foo"), NULL)
-    expect_equal(of_landings(country = "foo"), NULL)
+	expect_error(of_landings(species = "foo"), NULL)
+    expect_error(of_landings(country = "foo"), NULL)
     expect_error(of_landings(species = "foo", country = "foo"))
 })
 
