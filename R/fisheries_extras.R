@@ -28,8 +28,8 @@ assert_that(are_equal(ncol(x), 3))
 stopifnot(class(x) == "data.frame") 
 
 # Allows to check which type of landings data we're working with (country or species)
-species_dataset <- c("catch","year", "species")
-country_dataset <- c("catch","year", "country")
+species_dataset <- c("year","catch", "species")
+country_dataset <- c("year","catch", "country")
 
 # Update ggplot theme for plots
 old <- theme_get()
@@ -66,5 +66,7 @@ ggtitle(title)
 # Reset theme back to old default.
 theme_set(old)
 # Return plot object
-return(fish_plot)
+if(!identical(class(fish_plot), "function")) {
+    return(fish_plot)
+    }
 }
