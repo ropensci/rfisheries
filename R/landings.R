@@ -17,15 +17,16 @@
 #' of_landings(species = 'COD')
 #'}
 of_landings <- function(country = NA, species = NA, foptions = list()) {
-    if (!is.na(country) && !is.na(species))
-        stop("Specify country or species but not both", call. = FALSE)
     if (is.na(country) && is.na(species)) {
         url <- "http://openfisheries.org/api/landings"
     } else if (!is.na(country) && is.na(species)) {
         url <- paste0("http://openfisheries.org/api/landings/countries/",
             country, ".json")
-    } else {
+    } else if (is.na(country) && !is.na(species)) {
         url <- paste0("http://openfisheries.org/api/landings/species/",
+            species, ".json")
+    } else {
+        url <- paste0("http://openfisheries.org/api/landings/countries/", country, "/species/",
             species, ".json")
     }
     landings_call <- GET(url, foptions)
