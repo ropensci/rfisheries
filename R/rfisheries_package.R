@@ -22,7 +22,7 @@ NULL
 #' @format A data table with 239 rows and 2 variables
 NULL
 
-D
+
 #' Deprecated functions in rfisheries
 #' 
 #' \itemize{
