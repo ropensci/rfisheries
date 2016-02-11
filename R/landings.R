@@ -36,11 +36,15 @@ of_landings <- function(country = NA, species = NA, foptions = list()) {
     } else {
     landings_data <- data.frame(rbindlist(landings_data_JSON))
     # Add the species as a column to avoid ambguity
-    if(!is.na(species))  landings_data <- cbind(landings_data, species)
-    landings_data$species <- as.character(landings_data$species)
+    if(!is.na(species))  {
+        landings_data <- cbind(landings_data, species)
+        landings_data$species <- as.character(landings_data$species)
+    }
     # Do the same with the country.
-    if(!is.na(country))  landings_data <- cbind(landings_data, country)
-    landings_data$country <- as.character(landings_data$country)
+    if(!is.na(country))  {
+        landings_data <- cbind(landings_data, country)
+        landings_data$country <- as.character(landings_data$country)
+        }
     }
 
     if (nrow(landings_data) == 0) {
