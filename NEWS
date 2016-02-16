@@ -1,3 +1,8 @@
+rfisheries 0.2
+================
+* Updated API end points
+* Minor updates to get package to current CRAN standards
+
 rfisheries 0.1
 ================
 * Minor bug fixes and improvements
