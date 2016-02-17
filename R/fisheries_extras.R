@@ -1,5 +1,5 @@
 #' Plots data for an rfisheries result
-#' 
+#'
 #'@importFrom ggplot2 ggplot theme_get theme_update ggtitle geom_line labs theme_set element_line element_blank aes
 #' @param x A landings dataset belonging to either a species or a country.
 #' @param linecolor Default line color is steelblue
@@ -16,7 +16,7 @@ fish_plot <- function(x, linecolor = "steelblue", linesize = 0.9, title = NULL, 
 
 assert_that(class(x) == "data.frame")
 # This weird step is just to satisfy the notes in check()
-year <- NA 
+year <- NA
 catch <- NA
 x[,3] <- toupper(x[, 3])
 # Both datasets really should have 3 columns.
@@ -25,7 +25,7 @@ x[,3] <- toupper(x[, 3])
 assert_that(not_empty(x))
 assert_that(are_equal(ncol(x), 3))
 # This needs to be a new assertion but I haven't figured out how to write new assertions for assert_that.
-stopifnot(class(x) == "data.frame") 
+stopifnot(class(x) == "data.frame")
 
 # Allows to check which type of landings data we're working with (country or species)
 species_dataset <- c("year","catch", "species")
@@ -43,11 +43,11 @@ if(identical(species_dataset, names(x))) {
 
 if(is.null(title)) {
     english_name <- species_code_data[which(species_code_data$a3_code == unique(x$species)), ]$english_name
-    title <- paste0("Landings for ", english_name, " (", unique(x$species), ")")    
+    title <- paste0("Landings for ", english_name, " (", unique(x$species), ")")
 }
-fish_plot <- ggplot(x, aes(year, catch)) + 
-geom_line(color = linecolor, size = linesize) + 
-labs(x = "Year", y = "Catch (in tonnes)") + 
+fish_plot <- ggplot(x, aes(year, catch)) +
+geom_line(color = linecolor, size = linesize) +
+labs(x = "Year", y = "Catch (in tonnes)") +
 ggtitle(title)
 }
 
@@ -56,11 +56,11 @@ ggtitle(title)
 if(identical(country_dataset, names(x))) {
     if(is.null(title)) {
      country_name <- country_code_data[which(country_code_data$iso3c == unique(x$country)), ]$country
-    title <- paste0("Landings for ", country_name, " (", unique(x$country), ")")    
+    title <- paste0("Landings for ", country_name, " (", unique(x$country), ")")
     }
-fish_plot <-  ggplot(x, aes(year, catch)) + 
-geom_line(color = linecolor, size = linesize) + 
-labs(x = "Year", y = "Catch (in tonnes)") + 
+fish_plot <-  ggplot(x, aes(year, catch)) +
+geom_line(color = linecolor, size = linesize) +
+labs(x = "Year", y = "Catch (in tonnes)") +
 ggtitle(title)
 }
 # Reset theme back to old default.
