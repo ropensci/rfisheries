@@ -3,3 +3,4 @@ multiple_countries.png
 testing.R
 .travis.yml
 appveyor.yml
+^cran-comments\.md$
