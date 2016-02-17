@@ -136,7 +136,7 @@ cod_plot
 ```
 [Please report any issues or bugs](https://github.com/ropensci/rfisheries/issues).
 
-License: CC0
+License: MIT
 
 This package is part of the [rOpenSci](http://ropensci.org/packages) project.
 
