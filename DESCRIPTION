@@ -1,6 +1,6 @@
 Package: rfisheries
 Title: 'Programmatic Interface to the 'openfisheries.org' API'
-Version: 0.2
+Version: 0.2.99
 Date: 2016-02-18
 Authors@R: c(person("Karthik", "Ram", role = c("aut", "cre"), email =
     "karthik.ram@gmail.com"), person("Carl", "Boettiger", role = "aut"),
