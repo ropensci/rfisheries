@@ -1,10 +1,6 @@
-language: c
-script: "./travis-tool.sh run_tests"
-before_script:
-- curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
-- chmod 755 ./travis-tool.sh
-- "./travis-tool.sh bootstrap"
-- "./travis-tool.sh install_deps"
+language: r
+sudo: false
+cache: packages
 notifications:
   slack:
     secure: Cc7d5WF0iixUX3100ysaaw+RqvKTrTVfw3mCaxiLe5vLl1FxraePUg8NX+E4JaftKF8x9JkWWdUWbj1l32i3QRaEUZeQdJ2mrGrUv+bDxQgpH/gm+5RCqSFJpWivEs15arp4wrHEA5iUSXrJc/DlEF6+gpGVP4XyF0nP3bgA3Y8=
