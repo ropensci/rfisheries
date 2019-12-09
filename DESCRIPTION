@@ -17,7 +17,7 @@ Imports:
     ggplot2,
     rjson
 LazyData: yes
-URL: https://www.github.com/ropensci/rfisheries
+URL: https://docs.ropensci.org/rfisheries, https://www.github.com/ropensci/rfisheries
 BugReports: https://www.github.com/ropensci/rfisheries/issues/new
 License: MIT + file LICENSE
 RoxygenNote: 5.0.1
