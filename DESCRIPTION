@@ -6,7 +6,7 @@ Authors@R: c(person("Karthik", "Ram", role = c("aut", "cre"), email =
     "karthik.ram@gmail.com"), person("Carl", "Boettiger", role = "aut"),
     person("Andrew", "Dyck", role = "aut"))
 Maintainer: Karthik Ram <karthik.ram@gmail.com>
-Description: A programmatic interface to 'openfisheries.org'. This package is
+Description: A programmatic interface to 'openfisheries.org' (<http://www.openfisheries.org/>). This package is
     part of the 'rOpenSci' suite (https://ropensci.org).
 Depends:
     R (>= 2.15)
